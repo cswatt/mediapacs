@@ -1,0 +1,128 @@
+<html>
+<head>
+	<style>
+.state:hover {
+	opacity:0.1;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: left;
+}
+.d3-tip.e:after {
+    content: "\25C0";
+    margin: -4px 0 0 0;
+    top: 50%;
+    left: -8px;
+  }
+</style>
+<title>{{ title }}</title>
+	
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+
+	<p>ok then</p>
+	<script>
+
+		var width = 960,
+    height = 500;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var projection = d3.geo.albersUsa()
+    .scale(1000)
+    .translate([width / 2, height / 2]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+
+d3.csv("/static/age.csv", function(error, data) {
+	age_map = {};
+	name_map = {};
+	for (var i = 0; i < data.length; i++){
+		age_map[parseInt(data[i].GEOid2, 10)] = data[i].D002;
+		name_map[parseInt(data[i].GEOid2, 10)] = data[i].GEOdisplay_label;
+	}
+
+	function get_name(id){
+		return name_map[id];
+	}
+
+	function get_age(id){
+		return age_map[id];
+	}
+
+	function get_color(id) {
+		var age = get_age(id);
+		var color = "";
+		if ((20 < age) && (age <=25)){
+			color = "#fff7f3";
+		} if ((25 < age) && (age <=30)){
+			color = "#fde0dd";
+		} if ((30 < age) && (age <=35)){
+			color = "#fcc5c0";
+		} if ((35 < age) && (age <=40)){
+			color = "#fa9fb5";
+		} if ((40 < age) && (age <=45)){
+			color = "#f768a1";
+		} if ((45 < age) && (age <=50)){
+			color = "#dd3497";
+		} if ((50 < age) && (age <=55)){
+			color = "#ae017e";
+		} if ((55 < age) && (age <=60)){
+			color = "#7a0177";
+		} if ((60 < age) && (age <=65)){
+			color = "#49006a";
+		} 
+
+		return color;
+	}
+
+	var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .direction('e')
+  .offset([0, 10])
+  .html(function(d) {
+    return "<span style='color:#fff;font-family:sans-serif'>" + get_name(d.id) + " — median age: " + get_age(d.id) + "</span>";
+  });
+
+svg.call(tip);
+	d3.json("/static/us.json", function(error, us) {
+	  
+	  svg.selectAll(".state")
+	  		.data(topojson.feature(us, us.objects.counties).features)
+	  	.enter().append("path")
+	  		.attr("class", function(d) { return "state " + get_name(d.id);})
+	  		.attr("d", path)
+	  		.style("fill", function(d) { return get_color(d.id);})
+	  		.on('mouseover', tip.show)
+      	.on('mouseout', tip.hide);
+	});
+});
+
+</script>
+</body>
+</html>
