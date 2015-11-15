@@ -10,7 +10,12 @@
 	<script>
 	$(document).ready(function(){
 	//$('#nav').localScroll(800);
-	
+	$(".slidingDiv").hide();
+	$(".show_hide").show();
+
+	$('.show_hide').click(function(){
+	$(".slidingDiv").slideToggle();
+	});
 	RepositionNav();
 	
 	$(window).resize(function(){
@@ -42,6 +47,15 @@
 	<h1>How Media Companies Are Winning the 2016 Election</h1>
 </div>
 
+
+<div class="copy">
+<img src="/static/viz/timeseries-annot2.jpg" width="1000">
+<p>
+	Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+</p>
+<img src="/static/viz/median.png"/>
+</div>
+
 <!-- boop -->
 <div class="copy">
 <p>
@@ -57,33 +71,56 @@
 </p>
 </div>
 
-<h3>
-	How Each Party Is Spending
-</h3>
-<div class="temp"></div>
-
-<div class="copy">
-<p>
-	Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
-</p>
-</div>
-
-<h3>
-	The Platforms Receiving Money
-</h3>
-<div class="temp"></div>
-
-<div class="copy">
-<p>
-	Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
-</p>
-</div>
-
 <div id="second" class="sec1-header">
 	<h2>the companies that benefit</h2>
 </div>
+<br/><br/>
+<div class="box-container">
+<div class="box-label left">
+	email<br/>
+	<div class="sublabel">
+	$560,000
+	</div>
+</div>
+<div class="box email-box left"></div>
+<div class="clear"></div>
 
-<div class="temp"></div>
+<div class="box-label left">
+	facebook<br/>
+	<div class="sublabel">
+	$490,000 - $510,000
+	</div>
+</div>
+<div class="box facebook-box left"></div>
+<div class="clear"></div>
+
+<div class="box-label left">
+	google<br/>
+	<div class="sublabel">
+	$59,000 - $75,000
+	</div>
+</div>
+<div class="box google-box left"></div>
+<div class="clear"></div>
+
+<div class="box-label left">
+	twitter<br/>
+	<div class="sublabel">
+	$560,000
+	</div>
+</div>
+<div class="box twitter-box left"></div>
+<div class="clear"></div>
+
+<div class="box-label left">
+	snapchat<br/>
+	<div class="sublabel">
+	$5,000
+	</div>
+</div>
+<div class="box snapchat-box left"></div>
+<div class="clear"></div>
+</div>
 
 <!-- boop -->
 <div class="copy">
@@ -99,19 +136,73 @@
 <!-- boop -->
 <div class="copy">
 <p>
-	Vivamus nec tellus tempus, varius ex id, bibendum ligula. Suspendisse at nisi gravida, vehicula libero at, congue erat. Suspendisse commodo dolor a sollicitudin vehicula. Suspendisse in tincidunt tortor, eu dapibus justo. Nunc sed venenatis leo. Ut ac ipsum purus. Nulla porttitor suscipit libero quis sodales. Donec laoreet id felis vel tincidunt. Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+	For the upcoming 2016 General Election, there are a total of 2,526 individuals who have registered with the FEC or appear on official ballots for election to the House, Senate, or Presidential offices. Only 62 of those candidates are the topic of ads funded by independent expenditure.
+</p>
+
+<img src="/static/viz/candidates.jpg"/>
+<div class="caption">
+	Independent expenditures touch a small fraction of the candidates.
+</div>
+
+<p>
+	When a filing is made for independent expenditure, each spender has to designate which candidate their transaction is targetting, and whether the action is in support or opposition of that candidate. 
 </p>
 </div>
 
+<h3>
+	The Democrat and Republican Receiving the Most Support
+</h3>
+<br/><br/>
+<div class="cont1">
+<div class="round round-bernie left">
+	<div class="info">
+		$490,000
+	</div>
+</div>
+<div class="round round-jeb left">
+	<div class="info">
+		$32,000,000
+	</div>
+</div>
+<div class="clear"></div>
+</div>
+
+<br/><br/>
+<h3>
+	The Democrat and Republican Receiving the Most Opposition
+</h3>
+<br/><br/>
+<div class="cont2">
+<div class="round round-hillary left">
+	<div class="info">
+		$3,500,000
+	</div>
+</div>
+<div class="round round-trump left">
+	<div class="info">
+		$1,100,000
+	</div>
+</div>
+</div>
+
+<div class="clear"></div>
+<br/><br/>
 <div id="second" class="sec3-header">
 	<h2>who's paying? we don't know.</h2>
 </div>
-
+<br/><br/>
 <h3>
 	Map of Individual Contributions
 </h3>
-<div class="temp"></div>
+<div class="copy">
+<iframe src="http://rpubs.com/Msxtines/Statfest_topDonorsover100Kbylocation_party" width="900" height="600">
+</iframe>
+</div>
 
+<br/><br/>
+<div class="copy">
+<img src="/static/viz/SankeyChart.png">
+</div>
 <!-- boop -->
 <div class="copy">
 <p>

@@ -1,0 +1,29 @@
+wid= 1
+aopdem = bar(datenum(OPPOSEDEM),-oppdem,wid)
+aopdem.FaceColor = 'red'
+aopdem.FaceAlpha = 0.5
+hold on 
+aoprep = bar(datenum(OPPOSEREP),-opporep,wid)
+aoprep.FaceColor = 'blue'
+aoprep.FaceAlpha = 0.5
+suprep = bar(datenum(SUPPORTREP),suppRep,wid)
+suprep.FaceColor = 'red'
+suprep.FaceAlpha = 0.5
+supdem = bar(datenum(SUPPORTDEM),suppDem,wid)
+supdem.FaceColor = 'blue'
+supdem.FaceAlpha = 0.5
+startDate = datenum('03/02/0015');
+endDate = datenum('11/13/0015');
+Xdata = linspace(startDate,endDate,10);
+ax = gca;
+ax.XTick = Xdata;
+datetick('x','mmm-dd','keepticks')
+line([datenum(Debdate),datenum(Debdate)],get(gca,'ylim'),'LineStyle','--',...
+    'LineWidth',1,'Color','r')
+line([datenum(RepDate),datenum(RepDate)],get(gca,'ylim'),'LineStyle','--',...
+    'LineWidth',1,'Color','b')
+legend('Oppose Dem', 'Oppose Rep', 'Support Dem', 'Support Rep')
+title('Support & oppose donation amount from Mar-02 to Nov-13 in 2015')
+hold off
+
+

@@ -38,6 +38,16 @@ h3{
 	text-align: center;
 }
 
+h4{
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 25px;
+	line-height: 40px;
+	color: #000000;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 img{
 	margin: 0 auto;
 }
@@ -72,7 +82,7 @@ a, a:active, a:visited, a:hover{
 	background: linear-gradient(
       rgba(0, 0, 0, 0.45), 
       rgba(0, 0, 0, 0.45)
-    ), url("/static/top-hero.jpg") 50% -75px no-repeat fixed;
+    ), url("/static/head.gif") 50% -75px no-repeat fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -92,7 +102,7 @@ a, a:active, a:visited, a:hover{
 	background: linear-gradient(
       rgba(0, 0, 0, 0.45), 
       rgba(0, 0, 0, 0.45)
-    ), url("/static/hillary-head.jpg") 50% -75px no-repeat fixed;
+    ), url("/static/hillary-head.jpg") 50% -0px no-repeat fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -123,4 +133,148 @@ a, a:active, a:visited, a:hover{
 	color:#ffffff;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 12px;
+}
+
+
+.round-bernie {
+	background: url("/static/img/sanders-1.png") 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.round-trump {
+	background: url("/static/img/trump-1.png") 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 151;
+  height: 151;
+  margin: 0 auto;
+}
+.round-hillary {
+	background: url("/static/img/hillary-1.png") 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 266;
+  height: 266;
+  margin: 0 auto;
+}
+.round-jeb {
+	background: url("/static/img/jeb-1.png") 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 806px;
+  height: 806px;
+  margin: 0 auto;
+}
+
+.round-bernie img, .round-jeb img, .round-trump img, .round-hillary img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.round .info{
+	background-color: rgba(0, 0, 0, 0.45);
+	font-family: 'Helvetica Neue';
+	color:#ffffff;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	margin:auto;
+	padding-top:40%;
+	text-align:center;
+}
+
+.round-bernie .info{
+	font-size:12px;
+}
+
+.round-hillary .info{
+	font-size:25px;
+}
+.round-trump .info{
+	font-size:20px;
+}
+.round-jeb .info{
+	font-size:50px;
+}
+
+.round .info:hover{
+	opacity:1;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.clear{
+	clear:both;
+}
+
+.cont1{
+	width:906px;
+	margin: 0 auto;
+}
+.cont2{
+	width:417px;
+	margin: 0 auto;
+}
+
+.box{
+	height:50px;
+	margin-left:10px;
+}
+
+.box-label{
+	height:50px;
+	width:100px;
+	display:inline-block;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size:20px;
+	color:#000000;
+	padding-right: 10px;
+	text-transform:uppercase;
+	text-align:right;
+}
+
+.sublabel{
+	font-size:10px;
+	color:rgba(0, 0, 0, 0.9);
+}
+
+.box-container{
+	width:920px;
+	margin: 0 auto;
+}
+
+.email-box{
+	background-color:#ff9500;
+	width:800px;
+}
+.facebook-box{
+	background-color:rgb(59, 89, 152);
+	width:706px;
+	border-right:36px solid rgb(165, 181, 214);
+}
+.google-box{
+	background-color:rgb(78, 153, 50);
+	width:84px;
+	border-right:22px solid rgb(160, 201, 145);
+}
+.twitter-box{
+	background-color:rgb(12, 127, 235);
+	width:2px;
+	border-right:104px solid rgb(121, 184, 242);
+}
+.snapchat-box{
+	background-color:rgb(255, 252, 0);
+	width:7px;
 }
