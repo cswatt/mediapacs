@@ -1,6 +1,6 @@
-<html>
-<head>
-	<style>
+{%extends "base.html" %}
+{% block body %}
+<style>
 .state:hover {
 	opacity:0.1;
 }
@@ -31,21 +31,11 @@
     left: -8px;
   }
 </style>
-<title>{{ title }} </title>
-	
-</head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
-	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-	<link rel="stylesheet" type="text/css" href="/static/style.css">
+<script>
 
-	<p>ok then</p>
-	<script>
-
-		var width = 960,
-    height = 500;
+var width = 960,
+height = 500;
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
@@ -109,7 +99,7 @@ d3.csv("/static/age.csv", function(error, data) {
     return "<span style='color:#fff;font-family:sans-serif'>" + get_name(d.id) + " — median age: " + get_age(d.id) + "</span>";
   });
 
-svg.call(tip);
+	svg.call(tip);
 	d3.json("/static/us.json", function(error, us) {
 	  
 	  svg.selectAll(".state")
@@ -125,4 +115,4 @@ svg.call(tip);
 
 </script>
 </body>
-</html>
+{% endblock %}

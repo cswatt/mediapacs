@@ -1,9 +1,126 @@
 body{
-	/*background-color: #ccc;*/
-	margin: 0;
-	/*min-width: 980px;*/
+	background-color: #ffffff;
+	margin: 0 auto;
 	padding: 0;
-	font-family: 'Merriweather', serif;
-	font-size: 14px;
+	width:80%;
+	font-family: 'Crimson Text', serif;
+	font-size: 18px;
 	line-height: 24px;
+}
+
+h1{
+	font-family: 'Crimson Text', serif;
+	font-size: 40px;
+	line-height: 60px;
+	color: #ffffff;
+	padding:100px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h2{
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 30px;
+	line-height: 40px;
+	color: #ffffff;
+	padding:100px;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h3{
+	font-family: 'Crimson Text', serif;
+	font-size: 30px;
+	line-height: 40px;
+	color: #000000;
+	margin: 0 auto;
+	text-align: center;
+}
+
+img{
+	margin: 0 auto;
+}
+
+p{
+	text-align: left;
+	margin-top:100px;
+	margin-bottom:100px;
+}
+
+a, a:active, a:visited, a:hover{
+	color: #000000;
+	text-decoration: none;
+	border-bottom: 1px dotted red;
+}
+
+.caption{
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 12px;
+}
+.copy{
+	width:80%;
+	margin: 0 auto;
+	text-align: center;
+}
+.top-header{
+	width:100%;
+	/*background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url("/static/top-hero.jpg");*/
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url("/static/top-hero.jpg") 50% -75px no-repeat fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.sec1-header{
+	width:100%;
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url("/static/twitter-head.jpg") 50% 0px no-repeat fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.sec2-header{
+	width:100%;
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url("/static/hillary-head.jpg") 50% -75px no-repeat fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.sec3-header{
+	width:100%;
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url("/static/audience-head.jpg") 50% -75px no-repeat fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.temp{
+	margin: 20px auto;
+	width: 600px;
+	height: 400px;
+	display:block;
+	background-image: url("/static/temp-bg.jpg");
+	background-repeat: repeat;
+	border: 1px solid #cccccc;
+}
+
+.footer{
+	padding:150px;
+	background-color:#000000;
+	color:#ffffff;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 12px;
 }

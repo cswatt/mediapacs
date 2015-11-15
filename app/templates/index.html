@@ -1,10 +1,126 @@
 <html>
 <head>
-
-<title>{{ title }} - microblog</title>
+<title>{{ title }}</title>
+	<link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/static/style.css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/static/js/jquery.easing.1.3.js"></script>
+	<script src="/static/js/jquery.scrolldeck.js"></script>
+	<script src="/static/js/jquery.scrollTo-1.4.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	//$('#nav').localScroll(800);
 	
+	RepositionNav();
+	
+	$(window).resize(function(){
+		RepositionNav();
+	});	
+	
+	//.parallax(xPosition, adjuster, inertia, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//adjuster - y position to start from
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro').parallax("50%", 0, 0.1, true);
+	$('#second').parallax("50%", 0, 0.1, true);
+	$('.bg').parallax("50%", 2500, 0.4, true);
+	$('#third').parallax("50%", 2750, 0.3, true);
+	
+	var deck = new $.scrolldeck({
+		slides: '.slide',
+		buttons: '#nav li a',
+		easing: 'easeInOutExpo'
+	});
+
+})
+
+	</script>
 </head>
 <body>
-ok
+<div id="intro" class="top-header">
+	<h1>How Media Companies Are Winning the 2016 Election</h1>
+</div>
+
+<!-- boop -->
+<div class="copy">
+<p>
+	Vivamus nec tellus tempus, varius ex id, bibendum ligula. Suspendisse at nisi gravida, vehicula libero at, congue erat. Suspendisse commodo dolor a sollicitudin vehicula. Suspendisse in tincidunt tortor, eu dapibus justo. Nunc sed venenatis leo. Ut ac ipsum purus. Nulla porttitor suscipit libero quis sodales. Donec laoreet id felis vel tincidunt. Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+</p>
+<img src="/static/img/img-bernie.png"/>
+<img src="/static/img/img-bernie2.png"/>
+<div class="caption">
+	An anti-Bernie Sanders ad <a href="https://www.instagram.com/p/80rWSdGhT0/">posted</a> to Donald Trump's Instagram.
+</div>
+<p>
+	Vivamus nec tellus tempus, varius ex id, bibendum ligula. Suspendisse at nisi gravida, vehicula libero at, congue erat. Suspendisse commodo dolor a sollicitudin vehicula. Suspendisse in tincidunt tortor, eu dapibus justo. Nunc sed venenatis leo. Ut ac ipsum purus. Nulla porttitor suscipit libero quis sodales. Donec laoreet id felis vel tincidunt. Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+</p>
+</div>
+
+<h3>
+	How Each Party Is Spending
+</h3>
+<div class="temp"></div>
+
+<div class="copy">
+<p>
+	Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+</p>
+</div>
+
+<h3>
+	The Platforms Receiving Money
+</h3>
+<div class="temp"></div>
+
+<div class="copy">
+<p>
+	Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+</p>
+</div>
+
+<div id="second" class="sec1-header">
+	<h2>the companies that benefit</h2>
+</div>
+
+<div class="temp"></div>
+
+<!-- boop -->
+<div class="copy">
+<p>
+	Vivamus nec tellus tempus, varius ex id, bibendum ligula. Suspendisse at nisi gravida, vehicula libero at, congue erat. Suspendisse commodo dolor a sollicitudin vehicula. Suspendisse in tincidunt tortor, eu dapibus justo. Nunc sed venenatis leo. Ut ac ipsum purus. Nulla porttitor suscipit libero quis sodales. Donec laoreet id felis vel tincidunt. Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+</p>
+</div>
+
+<div id="second" class="sec2-header">
+	<h2>some candidates get all the attention</h2>
+</div>
+
+<!-- boop -->
+<div class="copy">
+<p>
+	Vivamus nec tellus tempus, varius ex id, bibendum ligula. Suspendisse at nisi gravida, vehicula libero at, congue erat. Suspendisse commodo dolor a sollicitudin vehicula. Suspendisse in tincidunt tortor, eu dapibus justo. Nunc sed venenatis leo. Ut ac ipsum purus. Nulla porttitor suscipit libero quis sodales. Donec laoreet id felis vel tincidunt. Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+</p>
+</div>
+
+<div id="second" class="sec3-header">
+	<h2>who's paying? we don't know.</h2>
+</div>
+
+<h3>
+	Map of Individual Contributions
+</h3>
+<div class="temp"></div>
+
+<!-- boop -->
+<div class="copy">
+<p>
+	Vivamus nec tellus tempus, varius ex id, bibendum ligula. Suspendisse at nisi gravida, vehicula libero at, congue erat. Suspendisse commodo dolor a sollicitudin vehicula. Suspendisse in tincidunt tortor, eu dapibus justo. Nunc sed venenatis leo. Ut ac ipsum purus. Nulla porttitor suscipit libero quis sodales. Donec laoreet id felis vel tincidunt. Nam vulputate blandit nulla. Integer vitae sapien pharetra, vehicula enim eget, commodo nibh. Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+</p>
+</div>
+
+<div class="footer">
+	Curabitur ac ultrices orci, vitae ultrices metus. Curabitur augue justo, iaculis id nibh ac, venenatis facilisis eros. Nunc eget urna eu velit rutrum sollicitudin.
+</div>
 </body>
 </html>
