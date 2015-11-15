@@ -13,7 +13,7 @@ h1{
 	font-size: 40px;
 	line-height: 60px;
 	color: #ffffff;
-	padding:100px;
+	padding:120px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -81,7 +81,7 @@ a, a:active, a:visited, a:hover{
     ), url("/static/top-hero.jpg");*/
 	background: linear-gradient(
       rgba(0, 0, 0, 0.45), 
-      rgba(0, 0, 0, 0.45)
+      rgba(0, 0, 0, 0.25)
     ), url("/static/head.gif") 50% -75px no-repeat fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
